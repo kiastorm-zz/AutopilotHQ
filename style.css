@@ -1,0 +1,378 @@
+/* Base Styles */
+
+@font-face {
+  font-family: Karbon;
+  font-weight: 200;
+  src: url("assets/fonts/karbon/Karbon-Thin.otf") format("opentype");
+}
+@font-face {
+  font-family: Karbon;
+  font-weight: 300;
+  src: url("assets/fonts/karbon/Karbon-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Karbon;
+  src: url("assets/fonts/karbon/Karbon-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Karbon;
+  font-weight: 500;
+  src: url("assets/fonts/karbon/Karbon-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Karbon;
+  font-weight: 600;
+  src: url("assets/fonts/karbon/Karbon-Semibold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Karbon;
+  font-weight: 700;
+  src: url("assets/fonts/karbon/Karbon-Bold.otf") format("opentype");
+}
+
+body {
+  font-family: Karbon;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 46px;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 40px;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+h5 {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.link--underline {
+  color: #222C30;
+  text-decoration: underline; /* Doesn't look exactly like design, could use 2px border-bottom instead but imo its too far below the text */
+}
+
+a {
+  cursor: pointer;
+}
+
+.ctn {
+  padding-left: 4%;
+  padding-right: 4%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* Menu */
+
+.navigation {
+  display: flex;
+  align-items: center;
+  padding: 26px 0;
+}
+
+.navigation__item {
+  height: 24px;
+}
+
+.navigation__item.free-trial {
+  color: #1BDBB8;
+}
+
+.navigation__item.menu {
+  display: none;
+}
+
+.navigation__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation__list--right {
+  margin-left: auto;
+}
+
+.navigation__list__item {
+  color: #9ca9b3;
+  margin-left: 25px;
+}
+
+.navigation__list__item {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+
+/* How to - Hero */
+
+.how-to__hero {
+  padding-top: 120px;
+  padding-bottom: 60px;
+}
+
+.how-to__hero__heading {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.how-to__hero__subheading {
+  color: #56626B;
+  font-weight: 400;
+}
+
+/* How to - Content */
+
+.how-to__content {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 80px 30px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+
+.how-to__content__image {
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.how-to__content__caption {
+  font-weight: 500;
+  padding-right: 30px;
+}
+
+
+/* How to - Categories */
+
+.how-to__categories__thumbsup {
+  display: flex;
+  align-items: flex-end;
+  height: 100px;
+  padding-left: 30px;
+}
+
+.how-to__categories__heading {
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.how-to__categories__content {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  padding-bottom: 120px;
+}
+
+.how-to__categories__item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #E9EDF0;
+  border-radius: 3px;
+  height: 120px;
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+.how-to__categories__item__icon {
+  margin-right: 20px;
+}
+
+.how-to__categories__item__title {
+  font-weight: 500;
+}
+
+.how-to__categories__item__description {
+  color: #56626B;
+  font-weight: 400;
+}
+
+
+/* Footer */
+
+.footer {
+  background-color: #FAFBFC;
+  border-top: 1px solid #E9EDF0;
+}
+
+
+/* Footer - Subscribe */
+
+.footer__subscribe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.footer__subscribe__fancytext {
+  margin-right: 10px;
+}
+
+.footer__subscribe__fancytext img {   /* Broke the rules of BEM by nesting but aghhh */
+  display: block;
+}
+
+.footer__subscribe__cta {
+  font-weight: 400;
+}
+
+
+/* Footer - Links */
+
+.footer__links {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(205px, 1fr));
+  grid-row-gap: 30px;
+  padding: 40px 0;
+}
+
+.footer__links__list__title {
+  color: #9CA9B3;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.footer__links__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__links__list li {
+  cursor: pointer;
+  color: #6B7984;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+
+/* Footer - Bottom */
+
+.footer__bottom {
+  display: flex;
+  padding: 40px 0;
+}
+
+.footer__bottom__icon {
+  margin-right: 16px;
+}
+
+.footer__bottom__list {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto 0 0;
+}
+
+.footer__bottom__list li {
+  cursor: pointer;
+}
+
+.footer__bottom__text {
+  color: #9CA9B3;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-right: 16px;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 900px) {
+  .navigation__item:not(a) {
+    display: none;
+  }
+
+  .navigation__item.menu {
+    display: list-item;
+  }
+
+  .how-to__hero {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+
+  .how-to__hero__heading,
+  .footer__links__list__title {
+    margin-bottom: 5px;
+  }
+
+  .how-to__content,
+  .how-to__categories__content {
+    padding-bottom: 40px;
+  }
+
+  .how-to__categories__heading {
+      margin-bottom: 20px;
+  }
+
+  .how-to__content {
+    grid-row-gap: 40px;
+  }
+
+  .footer__subscribe {
+    flex-direction: column;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+  .footer__links,
+  .footer__bottom {
+    padding: 0 0 15px;
+  }
+  
+  .footer__links__list li {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  .footer__bottom,
+  .footer__bottom__list {
+    flex-direction: column;
+  }
+
+  .footer__bottom {
+    text-align: center;
+  }
+  
+  .footer__bottom__list {
+    margin: 0 auto;
+  }
+
+  .footer__bottom__list li {
+    line-height: 24px;
+  }
+}
